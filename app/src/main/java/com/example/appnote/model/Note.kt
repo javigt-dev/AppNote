@@ -1,6 +1,7 @@
 package com.example.appnote.model
 
-import org.threeten.bp.LocalDateTime
+
+import java.time.LocalDateTime
 import java.util.*
 
 data class Note(
