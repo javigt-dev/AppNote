@@ -26,6 +26,7 @@ import com.example.appnote.components.noteButton
 import com.example.appnote.components.noteInputText
 import com.example.appnote.data.NotesDataSource
 import com.example.appnote.model.Note
+import com.example.appnote.util.formatDate
 import java.time.format.DateTimeFormatter
 
 @Composable
@@ -127,8 +128,9 @@ fun noteRow(
                 text = note.description,
                 style = MaterialTheme.typography.subtitle1
             )
-            Text(text = note.entryDate.format(DateTimeFormatter.ofPattern("EEE,d MMM")),
-            style = MaterialTheme.typography.caption)
+//            Text(text = note.entryDate.format(DateTimeFormatter.ofPattern("EEE,d MMM")),
+//            style = MaterialTheme.typography.caption)
+            Text(text = formatDate(note.entryDate.time), style = MaterialTheme.typography.caption)
         }
     }
 }
